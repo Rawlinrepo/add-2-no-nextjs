@@ -26,6 +26,6 @@ FROM nginx:alpine AS nginx
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=client /app/.next/static /ust/share/nginx/html/_next/static
-COPY --from=client /app/public /ust/share/nginx/html/public
+COPY --from=client /app/.next/static /usr/share/nginx/html/_next/static
+COPY --from=client /app/public /usr/share/nginx/html/public
 
