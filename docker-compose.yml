@@ -1,12 +1,16 @@
 services:
   client:
-    build: .
+    build:
+      context: .
+      target: client
     ports:
     - '3000:3000'
     networks:
     - my_network
   nginx:
-    build: .
+    build:
+      context: .
+      target: nginx
     ports:
       - '85:80'
     depends_on:

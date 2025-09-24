@@ -22,7 +22,7 @@ EXPOSE 3000
 
 CMD ["node","server.js"]
 
-FROM nginx:alpine 
+FROM nginx:alpine AS nginx
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
