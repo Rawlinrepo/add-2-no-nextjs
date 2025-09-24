@@ -14,11 +14,10 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY --from=build /app/package*.json ./
-COPY --from=build /app/.next ./.next
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
 COPY --from=build /app/public ./public
-RUN npm install --omit=dev
 
 EXPOSE 3000
 
-CMD ["npm","start"]
+CMD ["node","server.js"]
