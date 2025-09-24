@@ -18,7 +18,7 @@ services:
     networks:
       - my_network
     volumes:
-    - logs:/var/log/nginx
+    - /home/ubuntu/add-2-no-nextjs/logs:/var/log/nginx
     
 networks:
   my_network:
