@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  add-2-no-service
+spec:
+  selector:
+    app:  add-2-no
+  type:  ClusterIP
+  ports:
+  - port:  3000
+    targetPort:  3000
