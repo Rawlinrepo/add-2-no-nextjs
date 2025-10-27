@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
         app: add-2-no
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: add-2-no-pods
-        image: rawlinendure/add-2-no-nextjs:v2
+        image: rawlinendure/add-2-no-nextjs:v3
         containerPort:
          - port:  3000
            protocol: TCP
